@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,28 +13,32 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="center" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.29999999999999999" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MNi-TN-eGD">
-                                <rect key="frame" x="146" y="59" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                            </view>
-                            <view alpha="0.29999999999999999" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HR5-Mo-sqN">
-                                <rect key="frame" x="146" y="192" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                            </view>
-                            <view alpha="0.29999999999999999" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hS4-xW-AVe">
-                                <rect key="frame" x="146" y="327" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9KL-bv-ped">
-                                <rect key="frame" x="167" y="752" width="59" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yrq-gs-99e">
+                                <rect key="frame" x="102.5" y="40" width="115" height="400"/>
+                                <subviews>
+                                    <view alpha="0.29999999999999999" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="MNi-TN-eGD">
+                                        <rect key="frame" x="0.0" y="0.0" width="115" height="114.5"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="MNi-TN-eGD" secondAttribute="height" multiplier="1:1" id="f8y-sm-04S"/>
+                                        </constraints>
+                                    </view>
+                                    <view alpha="0.29999999999999999" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="HR5-Mo-sqN">
+                                        <rect key="frame" x="0.0" y="142.5" width="115" height="114.5"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </view>
+                                    <view alpha="0.29999999999999999" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="hS4-xW-AVe">
+                                        <rect key="frame" x="0.0" y="285" width="115" height="115"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9KL-bv-ped">
+                                <rect key="frame" x="124.5" y="495" width="71" height="53"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
@@ -44,6 +48,13 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Yrq-gs-99e" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6qH-5f-w1y"/>
+                            <constraint firstItem="9KL-bv-ped" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7vg-Xl-XeZ"/>
+                            <constraint firstItem="Yrq-gs-99e" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.703863" id="UXq-BJ-mGu"/>
+                            <constraint firstItem="Yrq-gs-99e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="dgo-5V-a3h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9KL-bv-ped" secondAttribute="bottom" constant="20" id="lbT-9A-OBI"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="greenView" destination="hS4-xW-AVe" id="gJu-J7-r5g"/>
